@@ -1,6 +1,5 @@
 inputs/drowsiness/test*
 inputs/drowsiness/train*
-inputs/drowsiness/validation*
 .devcontainer*
 README.me 
 jupyter_notebooks*
