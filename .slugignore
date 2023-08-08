@@ -4,3 +4,4 @@ inputs/drowsiness/validation*
 .devcontainer*
 README.me 
 jupyter_notebooks*
+outputs/v3/hypertuning*
