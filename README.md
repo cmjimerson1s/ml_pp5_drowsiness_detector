@@ -112,7 +112,7 @@ The results from the hyperparameter tuning, specifically the selection of 320 un
 - As a client, I want to view average images and image variances for 'awake' and 'drowsy' eyes, so I can determine the visual difference between the two. 
 - As a client, I want to see a collection of images from each category so I can see a standard collection of the categories. 
 
-The User Stories above weere addressed in the implementation of the following...
+The User Stories above were addressed in the implementation of the following...
  1. The Data Visualation page in the Streamlit dashboard web tool developed. 
  2. Within the Data Visualization page the user can see both Average Variabily and Mean and Difference between the two categories. 
  3. Also within the Data Visualization page the user can view an image of a montage of each category, comprised of random images from each. 
