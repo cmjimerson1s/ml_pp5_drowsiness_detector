@@ -59,48 +59,48 @@ To validate this hypothesis, we train a machine learning model on the dataset an
 
 To help choose the optimal hyperparameters I implemented the uses of a Keras Tuner. Below I will go through each of the hyperparameters in detail. 
 
-Convolutional Layers:
+<u>Convolutional Layers:</u>
 
 The model has three convolutional layers which are instrumental for analyzing image data because they capture spatial hierarchies of features.
 With multiple convolutional layers, the model learns increasingly complex features. The initial layers likely detect basic features like edges and textures. Deeper layers can recognize more intricate patterns that might be directly associated with the state of the eye (drowsy or awake).
 
-Activation Function - ReLU:
+<u>Activation Function - ReLU:</u>
 
 The ReLU activation function introduces non-linearity in a computationally efficient manner.
 Using ReLU helps prevent the vanishing gradient problem during backpropagation.
 
-MaxPooling Layers:
+<u>MaxPooling Layers:</u>
 
 After each convolutional layer, a MaxPooling layer is used to downsample the feature maps.
 This reduces computational requirements and captures the essential features.
 
-Flatten Layer:
+<u>Flatten Layer:</u>
 
 This layer is used to transform the 3D output from preceding layers into a 1D vector, suitable for dense layers.
 
-Dense Layers and Hyperparameter hp_units:
+<u>Dense Layers and Hyperparameter hp_units:</u>
 
 Based on the results of the hyperparameter search, the optimal number of units in the dense layer was found to be 320.
 This specific choice strikes a balance between model complexity and the risk of overfitting. Having 320 units allows the model to capture a good amount of information without becoming overly complex.
 
-Dropout Layer:
+<u>Dropout Layer:</u>
 
 A rate of 0.5 means approximately half of the input units to this layer will be dropped out at each training step, promoting generalization and preventing overfitting.
 
-Output Layer:
+<u>Output Layer:</u>
 
 The model uses a sigmoid activation function, ideal for binary classification (awake or drowsy).
 
-Learning Rate and Hyperparameter hp_learning_rate:
+<u>Learning Rate and Hyperparameter hp_learning_rate:</u>
 
 The optimal learning rate for the optimizer, based on the search results, is 0.001.
 This learning rate provides a balance between convergence speed and the risk of overshooting the optimal values during training. The result from the hyperparameter search suggests that a learning rate of 0.001 allows for stable and effective training on the given dataset.
 
-Optimizer - Adam:
+<u>Optimizer - Adam:</u>
 
 Adam is an effective choice due to its adaptive learning rate properties. It adjusts the learning rate for each parameter, facilitating faster convergence without overshooting.
 
-Loss Function - Binary Crossentropy:
+<u>Loss Function - Binary Crossentropy:</u>
 
 Suitable for binary classification, it measures the difference between the actual and predicted probabilities.
 
@@ -115,18 +115,73 @@ The results from the hyperparameter tuning, specifically the selection of 320 un
 
 
 ## Dashboard Design
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
-* Later, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but subsequently you used another plot type).
+The dashboard for this project was developed using Streamlit. It consists of five pages, Project Summary, Drowsiness Visualization, Drowsiness Detector, Project Hypothesis, and Project Machine Learning Performance. 
+### Home Page-Project Summary
+This page contains information about the project such as the general purpose behind the project, information about the dataset used, and a list of the business requirements. 
+<details><summary>Show Project Summary</summary>
+<img src="readme_imgs/page1.jpg">
+</details>
 
+### Drowsiness Visualization
+The Drowsiness Visualization page first displays the variability between 'awake' and 'drowsy' eyes while also showing the mean or average image of each, and displaying the difference between those averages. 
+<details><summary>Show Average and Variabilty</summary>
+<img src="readme_imgs/page2.2.jpg">
+</details>
+<details><summary>Show Average 'Awake' and 'Drowsy', and Difference</summary>
+<img src="readme_imgs/page2.3.jpg">
+</details>
+<br>
+This page also displays a montage of random images fro both Awake and Drowsy labels, allowing the user to choose in a dropdown which of the two they want to view.
+<details><summary>Show Montage</summary>
+<img src="readme_imgs/page2.4.jpg">
+</details>
 
+### Drowsiness Detector
+This page allows users to upload images from the dataset to test if the eye is either 'Awake' or 'Drowsy'. A link is provided to the original dataset alowing the user to download the images for the detector to use. Once uploaded the page will make an analysis and prediction of its state, either 'Awake' or 'Drowsy'.
+<details><summary>Show Detector</summary>
+<img src="readme_imgs/page3.1.jpg">
+</details>
+Below you can see an image uploaded for evaluation. It is a single image, but multiple can be uploaded as well. 
+<details><summary>Show Montage</summary>
+<img src="readme_imgs/page3.2.jpg">
+</details>
+After upload, a pridiction will be made. It will also display the probabilty of the accuracy of the predicion and for each image provide a report. The report is also downloadable by clicking the link 'Download Report'. 
+<details><summary>Show Prediction</summary>
+<img src="readme_imgs/page3.3.jpg">
+</details>
+
+### Project Hypothesis
+This page displays the projects hypotheses and the conclusion in regards to the finds and model training. 
+<details><summary>Show Hypotheses</summary>
+<img src="readme_imgs/page4.jpg">
+</details>
+
+### Project Machine Learning Performance
+This page displays the distribution of the data, as well explaining the different types of accuracy and loss and plotting accordingly, also providing a confusion matrix and other performance metrics. 
+
+The graph shows the total number of images in the data set and how they have been divided between test, train, and validate, and the ratio of the division. 
+<details><summary>Show Image Distribution</summary>
+<img src="readme_imgs/page5.1.jpg">
+</details>
+There are two graphs that are showing the model performance in terms of the Accuracy and Loss.
+<details><summary>Show Accuracy</summary>
+<img src="readme_imgs/page5.2.jpg">
+</details>
+<details><summary>Show Loss</summary>
+<img src="readme_imgs/page5.3.jpg">
+</details>
+The final graph on the page is the confusion matrix, as well as an explanation of the graph. There is also a small chart that shows the general performance of the model in terms of Loss and Accuracy. 
+<details><summary>Show Prediction</summary>
+<img src="readme_imgs/page5.4.jpg">
+</details>
 
 ## Unfixed Bugs
-* You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
+There are currently no unfixed or known bugs. 
 
 ## Deployment
 ### Heroku
 
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
+* The App live link is: https://drowsiness-detector-2d6e5a9a5e32.herokuapp.com/
 * Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
 * The project was deployed to Heroku using the following steps.
 
@@ -137,26 +192,47 @@ The results from the hyperparameter tuning, specifically the selection of 320 un
 5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
 6. If the slug size is too large then add large files not required for the app to the .slugignore file.
 
+### Forking the GitHub Project
+To make a copy of the GitHub repository to use on your own account, one can fork the repository by doing as follows:
+
+1. On the page for the repository, go to the 'Fork' button on the top right of the page, and click it to create a copy of the repository which should then be on your own GitHub account.
+
+### Making a Local Clone
+1. On the page for the repository, click the 'Code' button
+2. To clone the repository using HTTPS, copy the HTTPS URL provided there
+3. Open your CLI application of choice and change the current working directory to the location where you want the cloned directory to be made.
+4. Type git clone, and then paste the previously copied URL to create the clone
 
 ## Technologies Used
-* Here you should list the libraries you used in the project and provide an example(s) of how you used these libraries.
-
+### Platforms
+* Heorku
+* Jupyter Notebooks
+* Kaggle
+* GitHub
+* VSCode 
+### Languages
+* Python
+* Markdown
+### Data Analysis and Machine Learning Libraries
+* Numpy
+* Pandas
+* Matplotlib
+* Seaborn
+* Plotly
+* Streamlit
+* Scikit-learn
+* Tensorflow
+* Keras
 
 ## Credits 
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
-
 ### Content 
+* Dataset from user [hazemfahmy](https://www.kaggle.com/hazemfahmy) on Kaggle
 
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-
-### Media
-
-- The photos used on the home and sign-up page are from This Open-Source site
-- The images used for the gallery page were taken from this other open-source site
+### Code
+* Template used belongs to [CodeInstitute](https://github.com/Code-Institute-Solutions/milestone-project-bring-your-own-data)
+* Walkthrough Project 1 was used as the skeletal structure of this project
+* Keras Tuning structer learned from [TensorFlow](https://www.tensorflow.org/tutorials/keras/keras_tuner) resources
 
 
 
