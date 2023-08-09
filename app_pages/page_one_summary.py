@@ -11,7 +11,7 @@ def page_one_body():
     )
     st.info(
         "##### Project Dataset #####\n\n"
-        "The dataset used in this project consists of 10,000 JPEG images of 3D rendered eyes, and surrounding orbital features. The total images are divided in half, with half being 'Awake' images and the other half being 'Drowsy'. The background for the images are nuetral gray.\n\n"
+        "The dataset used in this project consists of 9,869 JPEG images of 3D rendered eyes, and surrounding orbital features. The total images are divided in half, with half being 'Awake' images and the other half being 'Drowsy'. The background for the images are nuetral gray.\n\n"
     )
     st.warning(
         "##### Business Requirements #####\n\n"

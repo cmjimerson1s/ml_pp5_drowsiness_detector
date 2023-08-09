@@ -22,7 +22,19 @@ The dataset contains 9869 featured photos of computer generated eyes showcasing 
 
 
 ## Business Requirements
-* Describe your business requirements
+In an era where the number of vehicular accidents due to drowsy driving is on the rise, EyeVigil Systems Inc. has identified a critical need for a state-of-the-art machine learning system. We have been hired by EyeVigil Systems to provide a 'proof of concept' showing that machine learning is capable of analysing the human eye, and based upon its 'openness' determine if it is showing signs of drowsiness. This project has three Business Requirements, a study to visually identify drowsy drivers, accurate prediction of driver drowsiness, downloadable drowsiness prediction report. Successfully fulfilling these will provide proof of concept and thus allow for further development, with the end goal of providing a real-time video machine learning system to detect drowsiness. Below the Business Requirements are outlined further.
+
+1. A Study to Visually Identify Drowsy Drivers:
+
+The system will perform image analysis on images to visually differentiate between alert and drowsy drivers. It will study the 'openness' of drivers' eyes to identify signs of drowsiness.
+
+2. Accurate Prediction of Driver Drowsiness:
+
+The drowsiness detection model will be developed as a binary classifier to accurately predict whether a given driver is drowsy or not based on their eye images. The model will utilize machine learning algorithms and computer vision techniques to achieve high accuracy in identifying drowsiness in drivers.
+
+3. Downloadable Drowsiness Prediction Reports:
+
+Upon analyzing a driver's eye images, the system will generate a comprehensive prediction report for each examination. The report will include details such as the date and time of the examination, the prediction result (Drowsy or Awake), and the associated probability. The report will be downloadable in a user-friendly format for record-keeping and further analysis.
 
 
 ## Hypothesis and Validation
