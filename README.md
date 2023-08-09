@@ -107,8 +107,33 @@ Suitable for binary classification, it measures the difference between the actua
 The results from the hyperparameter tuning, specifically the selection of 320 units for the dense layer and a learning rate of 0.001, indicate the configurations that provided the best performance on the validation data for this specific task of differentiating between awake and drowsy eye images. This optimization ensures that the model is neither too simple (and underfits the data) nor too complex (and overfits), and it learns at an optimal pace given the data's characteristics.
 
 ## Business Requirements Rationale and Mapping
-* List your business requirements and a rationale to map them to the Data Visualizations and ML tasks
+### Business Requirement 1: A Study to Visually Identify Drowsy Drivers
+* The system will perform image analysis on images to visually differentiate between alert and drowsy drivers. It will study the 'openness' of drivers' eyes to identify signs of drowsiness.
+- As a client, I want to view average images and image variances for 'awake' and 'drowsy' eyes, so I can determine the visual difference between the two. 
+- As a client, I want to see a collection of images from each category so I can see a standard collection of the categories. 
 
+The User Stories above weere addressed in the implementation of the following...
+ 1. The Data Visualation page in the Streamlit dashboard web tool developed. 
+ 2. Within the Data Visualization page the user can see both Average Variabily and Mean and Difference between the two categories. 
+ 3. Also within the Data Visualization page the user can view an image of a montage of each category, comprised of random images from each. 
+### Business Requirement 2: Accurate Prediction of Driver Drowsiness
+* The drowsiness detection model will be developed as a binary classifier to accurately predict whether a given driver is drowsy or not based on their eye images. The model will utilize machine learning algorithms and computer vision techniques to achieve high accuracy in identifying drowsiness in drivers.
+- As a client, I want to be able to access a machine learning tool, so that I can aquire a predicted state of an eye based on the image provided.
+- As a client, I want to be able to view the prediction probabilty, so that I can assess the potential accuracy.
+- As a client, I want the machine learning tool to have an accuacy of at least 90%, so that I can accertain if this model can be developed further.
+- As a client, I want to be able to upload multiple images, so that I can have a report generated for multiple images at one time.
+
+The User Stories above were addressed in the implemntation of the following...
+ 1. The Drowsiness Detector page allows for users to upload images, single or multiple at a time.
+ 2. The paage, once an image has been uploaded, displays the prediction under the image. 
+ 3. A graph is provided that shows the percenage of probabilyt for an accurate prediction. 
+ 4. The Project Machine Learning Performance page has a table that shows the Loss and Accuracy of the model. 
+### Business Requirement 3: Downloadable Drowsiness Prediction Reports
+* Upon analyzing a driver's eye images, the system will generate a comprehensive prediction report for each examination. The report will include details such as the date and time of the examination, the prediction result (Drowsy or Awake), and the associated probability. The report will be downloadable in a user-friendly format for record-keeping and further analysis.
+- As a client, I want to be able to easily download a report of the model prediction, so I can record the predictions that have been made. 
+
+The User Stories above were addressed in the implemntation of the following...
+ 1. The Drowsiness Detector page allows for users to download the full report of the predictions for any and all of the images they upload to the detector rool
 
 ## Machine Learning Business Case
 * In the previous bullet, you potentially visualized an ML task to answer a business requirement. You should frame the business case using the method we covered in the course 
