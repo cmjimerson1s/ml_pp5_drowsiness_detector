@@ -57,6 +57,54 @@ To validate this hypothesis, we train a machine learning model on the dataset an
 
 ## Model Rationale
 
+To help choose the optimal hyperparameters I implemented the uses of a Keras Tuner. Below I will go through each of the hyperparameters in detail. 
+
+Convolutional Layers:
+
+The model has three convolutional layers which are instrumental for analyzing image data because they capture spatial hierarchies of features.
+With multiple convolutional layers, the model learns increasingly complex features. The initial layers likely detect basic features like edges and textures. Deeper layers can recognize more intricate patterns that might be directly associated with the state of the eye (drowsy or awake).
+
+Activation Function - ReLU:
+
+The ReLU activation function introduces non-linearity in a computationally efficient manner.
+Using ReLU helps prevent the vanishing gradient problem during backpropagation.
+
+MaxPooling Layers:
+
+After each convolutional layer, a MaxPooling layer is used to downsample the feature maps.
+This reduces computational requirements and captures the essential features.
+
+Flatten Layer:
+
+This layer is used to transform the 3D output from preceding layers into a 1D vector, suitable for dense layers.
+
+Dense Layers and Hyperparameter hp_units:
+
+Based on the results of the hyperparameter search, the optimal number of units in the dense layer was found to be 320.
+This specific choice strikes a balance between model complexity and the risk of overfitting. Having 320 units allows the model to capture a good amount of information without becoming overly complex.
+
+Dropout Layer:
+
+A rate of 0.5 means approximately half of the input units to this layer will be dropped out at each training step, promoting generalization and preventing overfitting.
+
+Output Layer:
+
+The model uses a sigmoid activation function, ideal for binary classification (awake or drowsy).
+
+Learning Rate and Hyperparameter hp_learning_rate:
+
+The optimal learning rate for the optimizer, based on the search results, is 0.001.
+This learning rate provides a balance between convergence speed and the risk of overshooting the optimal values during training. The result from the hyperparameter search suggests that a learning rate of 0.001 allows for stable and effective training on the given dataset.
+
+Optimizer - Adam:
+
+Adam is an effective choice due to its adaptive learning rate properties. It adjusts the learning rate for each parameter, facilitating faster convergence without overshooting.
+
+Loss Function - Binary Crossentropy:
+
+Suitable for binary classification, it measures the difference between the actual and predicted probabilities.
+
+The results from the hyperparameter tuning, specifically the selection of 320 units for the dense layer and a learning rate of 0.001, indicate the configurations that provided the best performance on the validation data for this specific task of differentiating between awake and drowsy eye images. This optimization ensures that the model is neither too simple (and underfits the data) nor too complex (and overfits), and it learns at an optimal pace given the data's characteristics.
 
 ## Business Requirements Rationale and Mapping
 * List your business requirements and a rationale to map them to the Data Visualizations and ML tasks
