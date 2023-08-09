@@ -227,26 +227,38 @@ There are currently no unfixed or known bugs.
 ### Heroku
 
 * The App live link is: https://drowsiness-detector-2d6e5a9a5e32.herokuapp.com/
-* Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
 * The project was deployed to Heroku using the following steps.
 
-1. Log in to Heroku and create an App
-2. At the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
-6. If the slug size is too large then add large files not required for the app to the .slugignore file.
+1. Create a requirement.txt file in GitHub, for Heroku to read, listing the dependencies the program needs in order to run.
+2. Set the runtime.txt Python version to a version that the current Heroku stack supports.
+3. Push the recent changes to GitHub and go to your Heroku account page to create and deploy.
+4. Chose "CREATE NEW APP", give it a unique name, and select a geographical region.
+5. From the Deploy tab, chose GitHub as deployment method, connect to GitHub and search for and select the project's repository.
+6. Select the branch you want to deploy, then click Deploy Branch.
+7. Click to "Enable Automatic Deploys " or chose to "Deploy Branch" from the Manual Deploy section.
+8. Wait for the logs to run while the dependencies are installed and the app is being built.
+9. The mock terminal is then ready and accessible from a link similar to https://your-projects-name.herokuapp.com/
+10. If the slug size is too large then add large files not required for the app to the .slugignore file, similar to the .gitignore file.
+
 
 ### Forking the GitHub Project
-To make a copy of the GitHub repository to use on your own account, one can fork the repository by doing as follows:
-
-1. On the page for the repository, go to the 'Fork' button on the top right of the page, and click it to create a copy of the repository which should then be on your own GitHub account.
+By forking this GitHub Repository you make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository. The steps to fork the repository are as follows:
+1. Locate the GitHub Repository of this project and log into your GitHub account.
+2. Click on the "Fork" button, on the top right of the page, just above the "Settings".
+3. Decide where to fork the repository (your account for instance)
+4. You now have a copy of the original repository in your GitHub account.
 
 ### Making a Local Clone
-1. On the page for the repository, click the 'Code' button
-2. To clone the repository using HTTPS, copy the HTTPS URL provided there
-3. Open your CLI application of choice and change the current working directory to the location where you want the cloned directory to be made.
-4. Type git clone, and then paste the previously copied URL to create the clone
+Cloning a repository pulls down a full copy of all the repository data that GitHub.com has at that point in time, including all versions of every file and folder for the project. The steps to clone a repository are as follows:
+1. Locate the GitHub Repository of this project and log into your GitHub account.
+2. Click on the "Code" button.
+3. Chose one of the available options: Clone with HTTPS, Open with Git Hub desktop, Download ZIP.
+4. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+5. Open Git Bash, if you don't have it downloaded to your local machine do that now.
+6. In the Git terminal type: git clone https://git.heroku.com/ml_pp5_drowsiness_detector.git
+7. Press Enter, and wait for the repository to be created.
+8. Open your prefered coding software of choice. 
+9. Open the folder at the location, and the software should place all the folders and files from the repo no wihtin your coding environment. 
 
 ## Technologies Used
 ### Platforms
