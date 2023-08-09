@@ -5,14 +5,15 @@
 2. [Business Requirements](#business-requirements)
 3. [Hypothesis and Validation](#hypothesis-and-validation)
 4. [Model Rationale](#model-rationale)
-5. [Business Requirements Rationale and Mapping](#business-requirements-rationale-and-mapping)
-6. [Machine Learning Business Case](#machine-learning-business-case)
-7. [Dashboard Design](#dashboard-design)
-8. [Unfixed Bugs](#unfixed-bugs)
-9. [Deployment](#deployment)
-10. [Technologies Used](#technologies-used)
-11. [Credits](#credits)
-12. [Acknowledgments](#acknowledgements)
+5. [User Stories](#user-stories)
+6. [Business Requirements Rationale and Mapping](#business-requirements-rationale-and-mapping)
+7. [Machine Learning Business Case](#machine-learning-business-case)
+8. [Dashboard Design](#dashboard-design)
+9. [Unfixed Bugs](#unfixed-bugs)
+10. [Deployment](#deployment)
+11. [Technologies Used](#technologies-used)
+12. [Credits](#credits)
+13. [Acknowledgments](#acknowledgements)
 
 ### Deployed Dashboard [here](https://drowsiness-detector-2d6e5a9a5e32.herokuapp.com/)
 
@@ -106,9 +107,18 @@ Suitable for binary classification, it measures the difference between the actua
 
 The results from the hyperparameter tuning, specifically the selection of 320 units for the dense layer and a learning rate of 0.001, indicate the configurations that provided the best performance on the validation data for this specific task of differentiating between awake and drowsy eye images. This optimization ensures that the model is neither too simple (and underfits the data) nor too complex (and overfits), and it learns at an optimal pace given the data's characteristics.
 
+## User Stories
+1. As a client, I want to view average images and image variances for 'awake' and 'drowsy' eyes, so I can determine the visual difference between the two. 
+2. As a client, I want to see a collection of images from each category so I can see a standard collection of the categories.
+3. As a client, I want to be able to access a machine learning tool, so that I can aquire a predicted state of an eye based on the image provided.
+4. As a client, I want to be able to view the prediction probabilty, so that I can assess the potential accuracy.
+5. As a client, I want the machine learning tool to have an accuacy of at least 90%, so that I can accertain if this model can be developed further.
+6. As a client, I want to be able to upload multiple images, so that I can have a report generated for multiple images at one time. 
+7. As a client, I want to be able to easily download a report of the model prediction, so I can record the predictions that have been made. 
+
 ## Business Requirements Rationale and Mapping
 ### Business Requirement 1: A Study to Visually Identify Drowsy Drivers
-* The system will perform image analysis on images to visually differentiate between alert and drowsy drivers. It will study the 'openness' of drivers' eyes to identify signs of drowsiness.
+The system will perform image analysis on images to visually differentiate between alert and drowsy drivers. It will study the 'openness' of drivers' eyes to identify signs of drowsiness.
 - As a client, I want to view average images and image variances for 'awake' and 'drowsy' eyes, so I can determine the visual difference between the two. 
 - As a client, I want to see a collection of images from each category so I can see a standard collection of the categories. 
 
@@ -117,7 +127,7 @@ The User Stories above were addressed in the implementation of the following...
  2. Within the Data Visualization page the user can see both Average Variabily and Mean and Difference between the two categories. 
  3. Also within the Data Visualization page the user can view an image of a montage of each category, comprised of random images from each. 
 ### Business Requirement 2: Accurate Prediction of Driver Drowsiness
-* The drowsiness detection model will be developed as a binary classifier to accurately predict whether a given driver is drowsy or not based on their eye images. The model will utilize machine learning algorithms and computer vision techniques to achieve high accuracy in identifying drowsiness in drivers.
+The drowsiness detection model will be developed as a binary classifier to accurately predict whether a given driver is drowsy or not based on their eye images. The model will utilize machine learning algorithms and data analytic techniques to achieve high accuracy, at least 90%, in identifying drowsiness in drivers.
 - As a client, I want to be able to access a machine learning tool, so that I can aquire a predicted state of an eye based on the image provided.
 - As a client, I want to be able to view the prediction probabilty, so that I can assess the potential accuracy.
 - As a client, I want the machine learning tool to have an accuacy of at least 90%, so that I can accertain if this model can be developed further.
@@ -127,9 +137,9 @@ The User Stories above were addressed in the implemntation of the following...
  1. The Drowsiness Detector page allows for users to upload images, single or multiple at a time.
  2. The paage, once an image has been uploaded, displays the prediction under the image. 
  3. A graph is provided that shows the percenage of probabilyt for an accurate prediction. 
- 4. The Project Machine Learning Performance page has a table that shows the Loss and Accuracy of the model. 
+ 4. The Project Machine Learning Performance page has a table that shows the Loss and Accuracy of the model.
 ### Business Requirement 3: Downloadable Drowsiness Prediction Reports
-* Upon analyzing a driver's eye images, the system will generate a comprehensive prediction report for each examination. The report will include details such as the date and time of the examination, the prediction result (Drowsy or Awake), and the associated probability. The report will be downloadable in a user-friendly format for record-keeping and further analysis.
+Upon analyzing a driver's eye images, the system will generate a comprehensive prediction report for each examination. The report will include details such as the date and time of the examination, the prediction result (Drowsy or Awake), and the associated probability. The report will be downloadable in a user-friendly format for record-keeping and further analysis.
 - As a client, I want to be able to easily download a report of the model prediction, so I can record the predictions that have been made. 
 
 The User Stories above were addressed in the implemntation of the following...
@@ -137,7 +147,7 @@ The User Stories above were addressed in the implemntation of the following...
 
 ## Machine Learning Business Case
 
-* The goal of this project is to leverage machine learning to create a drowsiness detector that can alert drivers when signs of drowsiness are detected, ensuring roads are safer.The drowsiness detector will also be a two/multi-class, single-label, classification model where the two primary classes would be "Awake" and "Drowsy." 
+* The goal of this project is to leverage machine learning to ultimately create a drowsiness detector that can alert drivers when signs of drowsiness are detected, ensuring roads are safer. The drowsiness detector will also be a two/multi-class, single-label, classification model where the two primary classes would be "Awake" and "Drowsy." 
 
 * Our ideal outcome is to provide a reliable proof of concept, that a machine learning tool can detect early signs of drowsiness and differentiate between it and alert. 
 
@@ -145,9 +155,9 @@ The User Stories above were addressed in the implemntation of the following...
 
 * The output should be a clear indication of whether the person is "Awake" or "Drowsy" along with the associated probability of the prediction. This real-time prediction will provide immediate feedback to the user.
 
-* Currently, many vehicles come with basic drowsiness alert systems that often use steering pattern recognition. However, this method is not foolproof and often results in false alarms or misses real drowsiness events. Other methods include manual self-assessment by drivers, but this is highly unreliable as a person's judgment may be impaired when they are drowsy. If this provides proof of concept further development will result in a realtime analysis of the driver and the visual signs of drowsiness. 
+* Currently, many vehicles come with basic drowsiness alert systems that often use steering pattern recognition. However, this method is not foolproof and often results in false alarms or misses real drowsiness events. Other methods include manual self-assessment by drivers, but this is highly unreliable as a person's judgment may be impaired when they are drowsy. If this project provides proof of concept further development will result in a realtime video analysis of the drivers.
 
-* The dataset used for the proof of concept was provided from Kaggle, linked in the Dataset Content section of this ReadMe file. 
+* The dataset used for this proof of concept was provided from Kaggle, linked in the Dataset Content section of this ReadMe file. 
 
 ## Dashboard Design
 The dashboard for this project was developed using Streamlit. It consists of five pages, Project Summary, Drowsiness Visualization, Drowsiness Detector, Project Hypothesis, and Project Machine Learning Performance. 
