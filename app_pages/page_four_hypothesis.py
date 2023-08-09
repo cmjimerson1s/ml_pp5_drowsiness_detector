@@ -13,9 +13,9 @@ def page_four_body():
     st.success(
         f"Conclusion:\n\n"
         f"To validate this hypothesis, we analyze the average eye openness of drowsy and alert" 
-        f"individuals from the dataset. Using Machine Learning we are able to determine that the" 
-        f"average openness of drowsy eyes is significantly lower than alert eyes. We can see this"
-        f"through the Average Image and Variability Images."
+        f" individuals from the dataset. Using Machine Learning we are able to determine that the" 
+        f" average openness of drowsy eyes is significantly lower than alert eyes. We can see this"
+        f" through the Average Image and Variability Images."
     )
     st.info(
         f"Hypothesis 2:\n\n"
@@ -24,5 +24,5 @@ def page_four_body():
     st.success(
         f"Conclusion:\n\n"
         f"To validate this hypothesis, we trained a machine learning model on the dataset and evaluated its performance."
-        f"The model achieved an accuracy greater than 90% for the test set, and as such, the hypothesis is supported."
+        f" The model achieved an accuracy greater than 90% for the test set, and as such, the hypothesis is supported."
     )

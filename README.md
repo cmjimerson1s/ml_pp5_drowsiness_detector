@@ -38,11 +38,25 @@ Upon analyzing a driver's eye images, the system will generate a comprehensive p
 
 
 ## Hypothesis and Validation
-* List here your project hypothesis(es) and how you envision validating it (them) 
+* Hypothesis 1:
+
+Drowsy individuals tend to have more closed eyes compared to alert individuals.
+
+* Validation:
+
+To validate this hypothesis, we analyze the average eye openness of drowsy and alert individuals from the dataset. Using Machine Learning we should be able to determine that the average openness of drowsy eyes is significantly lower than alert eyes. We can see this through the Average Image and Variability Images.
+
+* Hypothesis 2:
+
+There is a visual pattern that can be learned by a machine learning model to classify drowsy and alert eyes with an accuracy of at least 90%.
+
+* Validation:
+
+To validate this hypothesis, we train a machine learning model on the dataset and evaluated its performance. Should the model achieve an accuracy greater than 90% for the test set, then the client will consider this to be a validated hypothesis. 
 
 
 ## Model Rationale
-* List your rational for the hyperparameters used
+
 
 ## Business Requirements Rationale and Mapping
 * List your business requirements and a rationale to map them to the Data Visualizations and ML tasks
