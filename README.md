@@ -1,71 +1,42 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Drowsiness Detector
 
-## Codeanywhere Template Instructions
+## Table of Contents
+1. [Dataset Content](#dataset-content)
+2. [Business Requirements](#business-requirements)
+3. [Hypothesis and Validation](#hypothesis-and-validation)
+4. [Model Rationale](#model-rationale)
+5. [Business Requirements Rationale and Mapping](#business-requirements-rationale-and-mapping)
+6. [Machine Learning Business Case](#machine-learning-business-case)
+7. [Dashboard Design](#dashboard-design)
+8. [Unfixed Bugs](#unfixed-bugs)
+9. [Deployment](#deployment)
+10. [Technologies Used](#technologies-used)
+11. [Credits](#credits)
+12. [Acknowledgments](#acknowledgements)
 
-Welcome,
-
-This is the Code Institute student template for Codeanywhere. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
-
-You can safely delete the IDE Template Instructions section of this README.md file,  and modify the remaining paragraphs for your own project. Please do read the IDE Template Instructions at least once, though! It contains some important information about the IDE and the extensions we use. 
-
-## How to use this repo
-
-1. Use this template to create your GitHub project repo
-
-1. Log into <a href="https://app.codeanywhere.com/" target="_blank" rel="noreferrer">CodeAnywhere</a> with your GitHub account.
-
-1. On your Dashboard, click on the New Workspace button
-
-1. Paste in the URL you copied from GitHub earlier
-
-1. Click Create
-
-1. Wait for the workspace to open. This can take a few minutes.
-
-1. Open a new terminal and <code>pip3 install -r requirements.txt</code>
-
-1. In the terminal type <code>pip3 install jupyter</code>
-
-1. In the terminal type <code>jupyter notebook --NotebookApp.token='' --NotebookApp.password=''</code> to start the jupyter server.
-
-1. Open port 8888 preview or browser
-
-1. Open the jupyter_notebooks directory in the jupyter webpage that has opened and click on the notebook you want to open.
-
-1. Click the button Not Trusted and choose Trust.
-
-Note that the kernel says Python 3. It inherits from the workspace so it will be Python-3.8.12 as installed by our template. To confirm this you can use <code>! python --version</code> in a notebook code cell.
-
-## IDE Reminders
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In the IDE terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Deployed Dashboard [here](https://drowsiness-detector-2d6e5a9a5e32.herokuapp.com/)
 
 
 ## Dataset Content
-* Describe your dataset. Choose a dataset of reasonable size to avoid exceeding the repository's maximum size and to have a shorter model training time. If you are doing an image recognition project, we suggest you consider using an image shape that is 100px × 100px or 50px × 50px, to ensure the model meets the performance requirement but is smaller than 100Mb for a smoother push to GitHub. A reasonably sized image set is ~5000 images, but you can choose ~10000 lines for numeric or textual data. 
+The dataset contains 9869 featured photos of computer generated eyes showcasing various stages of drowsiness against a neutral background, and also fully alert and awake eyes. Drowsiness while driving is a perilous condition that can lead to severe accidents and loss of lives. It can affect anyone behind the wheel but [studies](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1757738/) show that a large part of vehicular accidents due to tiredness or drowsiness occurs with occupational drivers such as the drivers of lorries, goods vehicles, and company cars. The dataset is sourced from [Kaggle](https://www.kaggle.com/datasets/hazemfahmy/openned-closed-eyes).
 
 
 ## Business Requirements
 * Describe your business requirements
 
 
-## Hypothesis and how to validate?
+## Hypothesis and Validation
 * List here your project hypothesis(es) and how you envision validating it (them) 
 
 
-## The rationale to map the business requirements to the Data Visualizations and ML tasks
+## Model Rationale
+* List your rational for the hyperparameters used
+
+## Business Requirements Rationale and Mapping
 * List your business requirements and a rationale to map them to the Data Visualizations and ML tasks
 
 
-## ML Business Case
+## Machine Learning Business Case
 * In the previous bullet, you potentially visualized an ML task to answer a business requirement. You should frame the business case using the method we covered in the course 
 
 
@@ -93,7 +64,7 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 6. If the slug size is too large then add large files not required for the app to the .slugignore file.
 
 
-## Main Data Analysis and Machine Learning Libraries
+## Technologies Used
 * Here you should list the libraries you used in the project and provide an example(s) of how you used these libraries.
 
 
@@ -115,6 +86,6 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 
 
 
-## Acknowledgements (optional)
+## Acknowledgements
 * Thank the people that provided support through this project.
 
