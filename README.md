@@ -267,7 +267,7 @@ To make a copy of the GitHub repository to use on your own account, one can fork
 ### Code
 * Template used belongs to [CodeInstitute](https://github.com/Code-Institute-Solutions/milestone-project-bring-your-own-data)
 * Walkthrough Project 1 was used as the skeletal structure of this project
-* Keras Tuning structer learned from [TensorFlow](https://www.tensorflow.org/tutorials/keras/keras_tuner) resources
+* Keras Tuning learned from [TensorFlow](https://www.tensorflow.org/tutorials/keras/keras_tuner) resources
 
 
 
