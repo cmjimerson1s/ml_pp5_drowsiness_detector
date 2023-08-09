@@ -136,8 +136,18 @@ The User Stories above were addressed in the implemntation of the following...
  1. The Drowsiness Detector page allows for users to download the full report of the predictions for any and all of the images they upload to the detector rool
 
 ## Machine Learning Business Case
-* In the previous bullet, you potentially visualized an ML task to answer a business requirement. You should frame the business case using the method we covered in the course 
 
+* The goal of this project is to leverage machine learning to create a drowsiness detector that can alert drivers when signs of drowsiness are detected, ensuring roads are safer.The drowsiness detector will also be a two/multi-class, single-label, classification model where the two primary classes would be "Awake" and "Drowsy." 
+
+* Our ideal outcome is to provide a reliable proof of concept, that a machine learning tool can detect early signs of drowsiness and differentiate between it and alert. 
+
+* Success Metrics: The model should have an cccuracy of 90% or above on the test set.
+
+* The output should be a clear indication of whether the person is "Awake" or "Drowsy" along with the associated probability of the prediction. This real-time prediction will provide immediate feedback to the user.
+
+* Currently, many vehicles come with basic drowsiness alert systems that often use steering pattern recognition. However, this method is not foolproof and often results in false alarms or misses real drowsiness events. Other methods include manual self-assessment by drivers, but this is highly unreliable as a person's judgment may be impaired when they are drowsy. If this provides proof of concept further development will result in a realtime analysis of the driver and the visual signs of drowsiness. 
+
+* The dataset used for the proof of concept was provided from Kaggle, linked in the Dataset Content section of this ReadMe file. 
 
 ## Dashboard Design
 The dashboard for this project was developed using Streamlit. It consists of five pages, Project Summary, Drowsiness Visualization, Drowsiness Detector, Project Hypothesis, and Project Machine Learning Performance. 
@@ -262,5 +272,9 @@ To make a copy of the GitHub repository to use on your own account, one can fork
 
 
 ## Acknowledgements
-* Thank the people that provided support through this project.
+This is my final project, and as such I have many people to thank...
+ * My wonderful partner, Leo. Through this entire process you have been fighting in my corner and cheering me on. You have always believed I can do anything and you have been my rock. I love you, and thank you.
+ * My supportive housemate, Trevor. You have stepped up many times to help where you shouldn't need to but did anyway. You have supported me and Leo through a lot this last year. Thank you for being dependable and helping. 
+ * My mentor, Mo. You are a rockstar. You have taken time out of your busy day to help encourage me and gas me up to tackle things I didn't think I could. You have been everything a person coudl want in a mentor and I appreciate every ounce of energy and advise you gave me. Thank you so much.
+ * The my friends, Oskar, Patrik, and Mark, you all have been so supportive and encouraging and understanding when I have to be locked away for weeks typing away instead of hanging out. But, you all believed in me and made me feel like I could do it. Thank you.  
 
